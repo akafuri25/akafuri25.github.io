@@ -1,0 +1,310 @@
+/*
+  Welcome to Compass.
+  In this file you should write your main styles. (or centralize your imports)
+  Import this file using the following HTML or equivalent:
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+//@import compass/reset
+
+$brand-primary: #D22624
+
+@import ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap
+@import compass/css3
+
+body
+  font-family: 'Open Sans', sans-serif
+  background: #0e0c0c
+  color: #fff
+
+#down-btn
+  position: absolute
+  bottom: 0
+  color: #fff
+  font-size: 25px
+  display: block
+  width: 100%
+  left: 0
+  z-index: 25
+  padding: 15px
+  box-shadow: 0px -60px 35px -20px rgba(0, 0, 0, 0.63) inset
+
+#pt1
+  overflow: hidden
+  position: absolute
+  top: 0
+  bottom: 0
+  width: 100%
+  text-align: center
+  color: #fff
+  .img-pr
+    position: relative
+    background: url(../images/main-bg.jpg)
+      position: center
+      size: cover
+    height: 100%
+    width: 100%
+    top: -20%
+  .inner-content
+    display: table
+    width: 100%
+    height: 100%
+    position: relative
+    .the-section
+      display: table-cell
+      vertical-align: middle
+      .the-content
+        display: inline-block
+  h1
+    margin: 50px 0 0
+    font:
+      size: 50px
+      weight: 300
+  p
+    font:
+      size: 20px
+
+#main-nav
+  width: 100%
+  color: #fff
+  height: 100px
+  overflow: hidden
+  text-align: center
+  +background-image(linear-gradient(to right, #a02321 5%, #b8312a 45%, #a02321 50%))
+  z-index: 9999925
+  &.stuck
+    position: fixed
+    top: 0
+  ul
+    margin: 0
+    li
+      display: inline-block
+      vertical-align: middle
+      width: 145px
+      a
+        padding: 10px 15px
+        display: block
+        color: #fff
+        letter-spacing: 2px
+        text-transform: uppercase
+        margin: 0px 15px
+        font-weight: 300
+        font-size: 13px
+        &:hover, &:focus, &:active
+          text-decoration: none
+          background: rgba(0, 0, 0, 0.1)
+      &.active a
+        background: rgba(0, 0, 0, 0.1)
+      .brand-svg
+        height: 110px
+        width: auto
+        margin: -4px 0
+        display: inline-block
+      &.logo-outer
+        &:before
+          content: ''
+          background: #B8312A
+          width: 45px
+          height: 120px
+          display: block
+          position: absolute
+
+h1.title
+  text-align: center
+  font:
+    weight: 300
+    size: 35px
+  text-transform: uppercase
+  margin: 0 auto 50px
+  position: relative
+  > em
+    background: #0E0C0C
+    display: block
+    width: 100%
+    height: 40px
+    position: relative
+    margin: 0 auto -40px
+    @media (max-width: $screen-sm-max)
+      display: none
+  &:before
+    content: ''
+    border-top: 1px solid #fff
+    width: 100%
+    display: block
+    position: relative
+    top: 20px
+  span
+    display: inline-block
+    position: relative
+    background: #0e0c0c
+    padding: 0px 50px
+    em:nth-of-type(1)
+      content: ''
+      width: 0px
+      height: 0px
+      position: absolute
+      border: 10px solid #fff
+      border-right: 10px solid transparent
+      border-bottom: 10px solid transparent
+      transform: scale(1.4) rotateY(50deg)
+      display: block
+      left: -100px
+      top: 9px
+      opacity: 0
+    em:nth-of-type(2)
+      content: ''
+      width: 0px
+      height: 0px
+      position: absolute
+      border: 10px solid #b9312c
+      border-top: 10px solid transparent
+      border-left: 10px solid transparent
+      display: block
+      right: -100px
+      bottom: 9px
+      opacity: 0
+      transform: scale(1.4) rotateY(50deg)
+  &.lefty
+    text-align: left
+    width: auto
+    margin:
+      left: -52px
+      bottom: 20px
+    span
+      > em
+        border: 10px solid #b9312c
+        border-top: 10px solid transparent
+        border-left: 10px solid transparent
+
+figure
+  &.avatar
+    text-align: center
+  &.portfolio-image
+    background:
+      position: center
+      size: cover
+    height: 300px
+    margin-bottom: 30px
+
+.portfolio-group
+  margin-bottom: 100px
+
+.team-container
+  margin:
+    top: 100px
+  .team-group
+    margin:
+      top: 50px
+      bottom: 50px
+    .team-profile
+      margin-bottom: 20px
+      h2
+        text-transform: uppercase
+        font-weight: 300
+        font-size: 15px
+        text-align: center
+      p
+        font-size: 12px
+        letter-spacing: 2px
+        text-transform: uppercase
+        text-align: center
+
+.fullsize
+  padding-top: 165px
+
+.magic-triangle
+  width: 0
+  height: 0
+  border: 0px solid red
+    right-color: transparent
+    bottom-color: transparent
+  @media (max-width: $screen-sm-max)
+    display: none
+
+#pt4
+  background: url(../images/contact-bg.png)
+    attachment: fixed
+    position: right
+    size: contain
+    repeat: no-repeat
+  @media (max-width: $screen-sm-max)
+    background-size: cover
+  position: relative !important
+  overflow: hidden
+  .magic-triangle
+    position: absolute
+    top: 0
+    right: 100px
+    transform: scale(1.4) rotateY(60deg)
+    border:
+      color: #0e0c0c
+      right-color: transparent
+      bottom-color: transparent
+  .container
+    position: relative
+    z-index: 1
+    h1.title.lefty
+      @media (max-width: $screen-sm-max)
+        &::before
+          display: none
+        span
+          background: transparent
+
+
+.typograph
+  text-align: center
+  margin: 0 auto
+  width: 400px
+  border-bottom: 1px solid #0e0c0c
+  position: relative
+  p
+    margin: 0
+    transform: scale(0)
+    &:nth-of-type(1)
+      font-size: 75px
+      line-height: 1em
+    &:nth-of-type(2)
+      font-size: 100px
+      line-height: 0.9em
+    &:nth-of-type(3)
+      font-size: 130px
+      line-height: 1em
+    &:nth-of-type(4)
+      font-size: 55px
+      line-height: 0.5em
+      margin-bottom: 30px
+  span:nth-of-type(1)
+    content: ''
+    width: 0px
+    height: 0px
+    position: absolute
+    border: 10px solid #fff
+    border-right: 5px solid transparent
+    border-bottom: 20px solid transparent
+    display: block
+    top: 10px
+    left: 40px
+    opacity: 0
+  span:nth-of-type(2)
+    content: ""
+    width: 0px
+    height: 0px
+    position: absolute
+    border: 10px solid #b9312c
+    border-top: 20px solid transparent
+    border-left: 5px solid transparent
+    display: block
+    bottom: 22px
+    right: 0px
+    opacity: 0
+.introduce
+  padding-top: 20px
+  width: 550px
+  margin: 0 auto
+  text-align: center
+  opacity: 0
+  @media (max-width: $screen-sm-max)
+    width: 100%
+.brand-svg
+  width: 140px
+  margin: 0px auto 0
+  display: block

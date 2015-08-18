@@ -1,0 +1,10 @@
+{
+  "name": "akafuri-25",
+  "dependencies": {
+    "bootstrap-sass": "*",
+    "components-font-awesome": "*",
+    "ScrollMagic": "*",
+    "gsap": "*",
+    "waypoints": "*"
+  }
+}
