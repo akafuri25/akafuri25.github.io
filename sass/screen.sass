@@ -44,6 +44,12 @@ body
     height: 100%
     width: 100%
     top: -20%
+    &.bg-1
+      background-image: url(../images/main-bg.jpg)
+    &.bg-2
+      background-image: url(../images/main-bg-2.jpg)
+    &.bg-3
+      background-image: url(../images/main-bg-3.jpg)
   .inner-content
     display: table
     width: 100%
@@ -182,8 +188,7 @@ figure
     background:
       position: center
       size: cover
-    height: 300px
-    margin-bottom: 30px
+    height: 350px
 
 .portfolio-group
   margin-bottom: 100px
@@ -191,6 +196,7 @@ figure
 .team-container
   margin:
     top: 100px
+  padding-top: 105px
   .team-group
     margin:
       top: 50px
@@ -220,7 +226,7 @@ figure
   @media (max-width: $screen-sm-max)
     display: none
 
-#pt4
+#pt5
   background: url(../images/contact-bg.png)
     attachment: fixed
     position: right
@@ -301,6 +307,7 @@ figure
   width: 550px
   margin: 0 auto
   text-align: center
+  position: relative
   opacity: 0
   @media (max-width: $screen-sm-max)
     width: 100%
@@ -308,3 +315,51 @@ figure
   width: 140px
   margin: 0px auto 0
   display: block
+
+.bg-typograph
+  position: absolute !important
+  width: 100% !important
+  opacity: 0
+  background: url(../images/main-bg-4.jpg)
+    position: center
+    size: cover
+  top: 0px
+
+.pg-7
+  +make-md-column(7,0)
+.pg-5
+  +make-md-column(5,0)
+.pg-6
+  +make-md-column(6,0)
+.pg-4
+  +make-md-column(4,0)
+
+#pt3
+  padding-top: 100px
+
+.design-container
+  background: url(../images/design-bg.jpg)
+    size: cover
+    position: center
+.development-container
+  background: url(../images/development-bg.jpg)
+    size: cover
+    position: center
+
+.typ-1
+  h1
+    text-align: center
+    letter-spacing: 10px
+    text-transform: uppercase
+    font-size: 4em
+    font-weight: 300
+    padding-bottom: 10px
+    border-bottom: 1px solid #eaeaea
+    width: 500px
+    margin: 0px auto 0.5em
+  p
+    text-align: center
+    line-height: 1.8em
+    font-size: 1.2em
+    width: 500px
+    margin: 0px auto

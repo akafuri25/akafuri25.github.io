@@ -1,5 +1,10 @@
 $(document).ready(function () {
+
+    $("#pt1 .img-pr").addClass("bg-" + (Math.floor(Math.random() * (3 - 1 + 1)) + 1));
+
     var controller = new ScrollMagic.Controller();
+
+    var height = $(window).height();
 
     function changePT()
     {
@@ -86,6 +91,22 @@ $(document).ready(function () {
     //.addIndicators({name: "animasi tween lehugag"})
     .addTo(controller);
 
+    new ScrollMagic.Scene({triggerElement: "#tg2", duration: 100, offset: 450})
+    .setTween(".bg-typograph", 0.5, {opacity: 1})
+    //.addIndicators({name: "animasi tween lehugag"})
+    .addTo(controller);
+
+
+    new ScrollMagic.Scene({triggerElement: "#tg4", duration: 800, offset: (height/2)-100})
+    .setPin(".design-container")
+    //.addIndicators({name: "Design"})
+    .addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#tg4-2", duration: 800, offset: (height/2)-100})
+    .setPin(".development-container")
+    //.addIndicators({name: "Design"})
+    .addTo(controller);
+
     // HEADING 1
     function headingAnimation(trigger, element)
     {
@@ -103,15 +124,15 @@ $(document).ready(function () {
       .addTo(controller);
     }
     headingAnimation("#tg3","#heading-1");
-    headingAnimation("#tg4","#heading-2");
-    headingAnimation("#tg5","#heading-3");
+    headingAnimation("#tg5","#heading-2");
+    headingAnimation("#tg6","#heading-3");
 
     $("#main-nav ul li a").on('click', function() {
-      TweenMax.to(window, 2, {scrollTo:{y:$($(this).attr("href")).offset().top}, ease:Power2.easeOut});
+      TweenMax.to(window, 1, {scrollTo:{y:$($(this).attr("href")).offset().top}, ease:Power2.easeOut});
       return false;
     });
     $("#down-btn").on('click', function() {
-      TweenMax.to(window, 3, {scrollTo:{y:$("#pt2").offset().top+300}, ease:Power1.easeOut});
+      TweenMax.to(window, 3, {scrollTo:{y:$("#pt2").offset().top+500}, ease:Power1.easeOut});
       return false;
     });
 
